@@ -152,7 +152,7 @@ function Hero() {
                         <div className="flex gap-5 w-[100%] md:w-[50%] " >
                             <div className='flex flex-col h-96 w-[50%]   bg-gray-100 shadow-sm shadow-black  0 ' >
                                 <div className='w-full mx-auto ' >
-                                    <Image className=' w-full object-cover my-1 h-72 ' src="/images/photo.png" alt="The Dandy chair" width={300} height={300} />
+                                    <Image className=' w-full object-cover my-1 h-72 ' src="/images/Parent.png" alt="The Dandy chair" width={300} height={300} />
                                 </div>
 
                                 <div className='text-sm gap-1 text-[#2A254B] flex flex-col my-2 px-1 ' >
