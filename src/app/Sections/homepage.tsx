@@ -19,7 +19,7 @@ function Hero() {
                     {/* left-section */}
                     <div className=" flex flex-col gap-10 md:gap-4 px-6 md:px-11 py-4 md:py-7 bg-[#2A254B] h-full w-full md:w-[60%] " >
                        <div className=" " >
-                        <p className=" font-Clash  mt-16 text-[32px] md:text-2xl w-[80%] text-center   md:text-start md:w-[60%]" >
+                        <p className=" font-Clash  mt-16 text-[32px] md:text-2xl w-[90%] text-center   md:text-start md:w-[70%]" >
                             The furniture brand for the future, with timeless designs</p>
                         </div> 
 

@@ -4,10 +4,10 @@ import Link from 'next/link';
 function Footer() {
   return (
     <>
-      <div className="bg-[#2A254B] py-3 h-[666px] md:h-[380px]  " >
+      <div className="bg-[#2A254B] py-3  md:h-[380px]  " >
         <div className="flex  flex-col w-[90%] py-8 h-full justify-between  mx-auto   " >
         <div className="flex justify-between h-full md:flex-row flex-col   " >
-          <div className="flex flex-wrap text-white items-start gap-20  md:gap-16 font-Clash " >
+          <div className="flex flex-wrap text-white items-start gap-8 w-[60%] md:gap-16 font-Clash " >
             <div className="text-[16px w-[108px] h-[175px]  " >
               Menu
               <ul className=" mt-2 text-[14px] cursor-pointer  flex flex-col font-santoshi  " >
@@ -42,7 +42,7 @@ function Footer() {
           </div>
 
           {/* right side */}
-          <div className=" w-[90%]  md:w-[50%] flex flex-col h- text-[16px] gap-3 font-Clash  text-white" >
+          <div className=" w-[90%]  md:w-[40%] flex flex-col h- text-[16px] gap-3 font-Clash  text-white" >
             Join our mailing list
             <div className="flex  " >
               <input className="border-[1px] border-gray-500 w-[70%]  md:w-[350px] px-3 h-[56px] bg-[#2A254B] " type="gmail" placeholder="your@email.com" name="gmail" id="gmail" />
