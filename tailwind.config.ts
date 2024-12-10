@@ -13,6 +13,10 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily:{
+        Clash : "Clash Display , sans serif",
+        santoshi : ['Satoshi', 'sans-serif'],
+      }
     },
   },
   plugins: [],

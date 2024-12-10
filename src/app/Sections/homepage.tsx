@@ -18,21 +18,22 @@ function Hero() {
                 <div className="flex flex-col md:flex-row  text-white h-[502px] md:h-[480px]  ">
                     {/* left-section */}
                     <div className=" flex flex-col gap-10 md:gap-4 px-6 md:px-11 py-4 md:py-7 bg-[#2A254B] h-full w-full md:w-[60%] " >
-
-                        <p className="  mt-16 text[32px] md:text-xl w-[80%] md:w-[314px]" >
+                       <div className=" " >
+                        <p className=" font-Clash  mt-16 text-[32px] md:text-2xl w-[80%] text-center   md:text-start md:w-[60%]" >
                             The furniture brand for the future, with timeless designs</p>
+                        </div> 
 
                         <button className=" hidden md:block  px-3 w-[150px] py-2 text-sm bg-[#F9F9F926] ">View collection</button>
 
 
-                        <p className=" w-[] md:w-[580px] mt-16 md:mt-28 text-sm text-[#FFFFFF] h-[81px] " >
+                        <p className=" font-sans text-center md:text-start md:w-[90%] mt-16 md:mt-28 text-sm text-[#FFFFFF] h-[81px] " >
                             A new era in eco friendly furniture with Avelon, the French luxury retail brand
                             with nice fonts, tasteful colors and a beautiful way to display things digitally
                             using modern web technologies.
                         </p>
                      
-                     <div className="flex w-[80%] mt-20 justify-center sm:w-[150px] " >   
-                        <button className=" md:hidden block w-[80%]  px-3 sm:w-[150px] py-2 text-sm bg-[#F9F9F926] ">View collection</button>
+                     <div className="flex w-[80%] mt-20 justify-center mx-auto sm:w-[150px] " >   
+                        <button className=" md:hidden block w-full  px-3 sm:w-[150px] py-2 text-sm bg-[#F9F9F926] ">View collection</button>
                       </div>
                     </div>
 
@@ -42,33 +43,37 @@ function Hero() {
                     </div>
                 </div>
 
-                {/* heropart1 */}
-                <div className="mt-16 my-8 flex w-[90%] mx-auto md:w-full flex-col gap-8"  >
-                    <p className="text-center text-2xl my-7 " > What makes our brand different</p>
-                    <div className="flex flex-col md:flex-row gap-12  " >
-                        <div className="w-[80%] md:w-[23%] h-[84px] text-xl " >
-                            <TbTruckDelivery className="mb-2" />
-                            <p>Next day as standard  </p>
-                            <p className="text-sm mt-2 "> Order before 3pm and get your order the next day as standard</p>
-                        </div>
-                        <div className="w-[80%] md:w-[23%] h-[84px] text-xl ">
-                            <MdOutlineCheckCircle className="mb-2" />
-                            <p>Made by true artisans </p>
-                            <p className="text-sm mt-2" >  Handmade crafted goods made with
-                                real passion and craftmanship</p>
-                        </div>
-                        <div className="w-[80%] md:w-[25%] h-[84px] text-xl ">
-                            <FaRegCreditCard className="mb-2" />
-                            <p>Unbeatable prices </p>
-                            <p className="text-sm mt-1 "> For our materials and quality you won’t find better prices anywhere</p>
-                        </div>
-                        <div className="w-[80%] md:w-[25%] h-[84px] text-xl ">
-                            <PiFlowerTulipLight className="mb-2" />
-                            <p>Recycled packaging </p>
-                            <p className="text-sm mt-1 ">  We use 100% recycled packaging to ensure our footprint is manageable</p>
-                        </div>
-                    </div>
+                 {/* Cards  */}
+            <div className="w-[97%] mx-auto mt-20 " >
+                <p className="font-Clash text-center text-[24px] " >What makes our brand different</p>
+             <div className="flex  flex-wrap   justify-center gap-7 my-10 px-2 md:px-0  " >
+                <div className=" md:w-1/5 h-[244px] bg-[#F9F9F9] flex flex-col justify-center text-xl px-4 " > 
+                         <TbTruckDelivery className="mb-2 text-2xl " />
+                         <br/>
+                         <p className="font-Clash " >Next day as standard  </p>
+                         <p className="text-sm mt-2 font-santoshi "> Order before 3pm and get your order the next day as standard</p>
+                     </div>
+                <div className=" md:w-1/5  h-[244px] bg-[#F9F9F9] flex flex-col justify-center text-xl px-4 "  >
+                         <MdOutlineCheckCircle className="mb-2 text-2xl" />
+                         <br/>
+                         <p className="font-Clash " >Made by true artisans </p>
+                         <p className="text-sm mt-2 font-santoshi " >  Handmade crafted goods made with
+                             real passion and craftmanship</p>
                 </div>
+                <div className=" md:w-1/5 h-[244px] bg-[#F9F9F9] flex flex-col justify-center text-xl px-4 "  >
+                         <FaRegCreditCard className="mb-2 text-2xl " />
+                         <br/>
+                         <p className="font-Clash " >Unbeatable prices </p>
+                         <p className="text-sm mt-1 font-santoshi "> For our materials and quality you won’t find better prices anywhere</p>
+                </div>
+                <div className=" md:w-1/5 h-[244px] bg-[#F9F9F9] flex flex-col justify-center text-xl px-4 "  >
+                         <PiFlowerTulipLight className="mb-2 text-2xl " />
+                         <br/>
+                         <p className="font-Clash " >Recycled packaging </p>
+                         <p className="text-sm mt-1 font-santoshi ">  We use 100% recycled packaging to ensure our footprint is manageable</p>
+                </div>
+             </div>
+            </div>
 
                 {/* HeroCards */}
                 <div className=" my-10 mt-16 w-[90%] md:w-full mx-auto md:h-full  " >
@@ -134,7 +139,7 @@ function Hero() {
                     <div className="flex gap-5 my-6   " >
                         <div className=' hidden md:flex md:static  flex-col h-96 w-[50%]  bg-gray-100 shadow-sm shadow-black  0 ' >
                             <div className='w-full mx-auto ' >
-                                <Image className=' w-full object-cover my-1 h-72 ' src="/images/Right Image.png" alt="The Dandy chair" width={300} height={300} />
+                                <Image className=' w-full object-cover my-1 h-72 ' src="/images/big image.jpg" alt="The Dandy chair" width={300} height={300} />
                             </div>
 
                             <div className='text-sm gap-1 text-[#2A254B] flex flex-col my-2 px-1 ' >
@@ -187,7 +192,7 @@ function Hero() {
                             Sign up for our newsletter and receive exclusive offers on new ranges, sales, pop up stores and more
                         </p>
                     </div>
-                    <div className="flex w-full mt-8 my-2  h-[56px] " >
+                    <div className="flex w-full justify-center mt-8 my-2  h-[56px] " >
                         <input type="email" placeholder="your@email.com" id="email" name="email" className=" w-[70%] h-[56px] md:w-[300px] px-2 " />
                         <button className="bg-[#2A254B] px-3 w-[30%] md:w-[118px] h-[56px]   text-sm text-white " > Sign Up </button>
                     </div>
