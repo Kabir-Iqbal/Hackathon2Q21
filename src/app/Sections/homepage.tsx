@@ -79,8 +79,8 @@ function Hero() {
                 <div className=" my-10 mt-16 w-[90%] md:w-full mx-auto md:h-full  " >
                     <p className="text-2xl font-semibold text-[#2A254B] " >New ceramics</p>
                     {/* CardBox */}
-                    <div className="flex flex-wrap gap-6 my-6" >
-                        <div className='flex flex-col h-96 w-[45%] md:w-[23%]  bg-gray-100 shadow-sm shadow-black  0 ' >
+                    <div className="flex text-center flex-wrap gap-6 my-6 justify-center " >
+                        <div className='flex flex-col h-96 w-[45%] md:w-[30%] lg:w-[23%]  bg-gray-100 shadow-sm shadow-black  0 ' >
                             <div className='w-full mx-auto ' >
                                 <Image className=' w-full object-cover my-1 h-72 ' src="/images/Right Image.png" alt="The Dandy chair" width={300} height={300} />
                             </div>
@@ -91,7 +91,7 @@ function Hero() {
                             </div>
                         </div>
 
-                        <div className='flex flex-col h-96 w-[45%] md:w-[23%]   bg-gray-100 shadow-sm shadow-black  0 ' >
+                        <div className='flex flex-col h-96 w-[45%] md:w-[30%] lg:w-[23%]   bg-gray-100 shadow-sm shadow-black  0 ' >
                             <div className='w-full mx-auto ' >
                                 <Image className=' w-full object-cover my-1 h-72 ' src="/images/Photo.png" alt="The Dandy chair" width={300} height={300} />
                             </div>
@@ -103,7 +103,7 @@ function Hero() {
                         </div>
 
 
-                        <div className='flex flex-col h-96 w-[45%] md:w-[23%]   bg-gray-100 shadow-sm shadow-black  0 ' >
+                        <div className='flex flex-col h-96 w-[45%] md:w-[30%] lg:w-[23%]   bg-gray-100 shadow-sm shadow-black  0 ' >
                             <div className='w-full mx-auto ' >
                                 <Image className=' w-full object-cover my-1 h-72 ' src="/images/botel.png" alt="The Dandy chair" width={300} height={300} />
                             </div>
@@ -114,7 +114,7 @@ function Hero() {
                             </div>
                         </div>
 
-                        <div className='flex flex-col h-96 w-[44%] md:w-[23%]   bg-gray-100 shadow-sm shadow-black  0 ' >
+                        <div className='flex flex-col h-96 w-[45%] md:w-[30%] lg:w-[23%]   bg-gray-100 shadow-sm shadow-black  0 ' >
                             <div className='w-full mx-auto ' >
                                 <Image className=' w-full object-cover my-1 h-72 ' src="/images/Photo (1).png" alt="The Dandy chair" width={300} height={300} />
                             </div>
