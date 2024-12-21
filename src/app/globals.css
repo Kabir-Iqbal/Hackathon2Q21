@@ -29,3 +29,8 @@
     font-weight: 300;
     font-style: normal;
   }
+
+
+  label{
+    cursor: pointer;
+  }

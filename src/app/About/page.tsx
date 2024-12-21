@@ -5,6 +5,7 @@ import { MdOutlineCheckCircle } from "react-icons/md";
 import { FaRegCreditCard } from "react-icons/fa6";
 import { PiFlowerTulipLight } from "react-icons/pi";
 import Footer from "../components/footer";
+import Link from "next/link";
 
 
 function Page() {
@@ -18,7 +19,9 @@ function Page() {
                     <div className=" font-Clash w-[90%] mx-auto md:mx-0  md:flex-1 text-2xl md:text-3xl text-[#2A254B] ">
                         <p className=" w-[98%] md:w-[90%] mx-auto text-center md:text-start " >  A brand built on the love of craftmanship,
                             quality and outstanding customer service </p>   </div>
-                    <div className=" w-[90%] mx-auto md:mx-0 md:flex-1  text-center font-santoshi  "> <button className="text-[#2A254B] w-[80%] md:w-[40%]  bg-slate-100 px-3 py-2 " type="button" > View Our Products </button>  </div>
+              <div className=" w-[90%] mx-auto md:mx-0 md:flex-1  text-center font-santoshi  "> 
+              <Link href="/ProductListing" >    <button className="text-[#2A254B] w-[80%] md:w-[40%]  bg-slate-100 px-3 py-2 " type="button" > View Our Products </button></Link>  
+                        </div>
                 </div>
 
                      {/* First listing  */}
