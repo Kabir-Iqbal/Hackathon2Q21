@@ -24,9 +24,9 @@ const toggleButton =()=>{
   return (
     <>
       {/* Homepage */}
-      <div className="md:h-[132px] items-center overflow-hidden fixed top-0 w-full bg-white z-50 " >
+      <div className="fixed top-0 w-full bg-white z-50 " >
       {/* Banner */}
-      <header className="flex  text-[#22202E] items-center py-5  md:py-0 justify-between px-6 mt-3 text-xl " >
+      <header className="flex h-[60px]  text-[#22202E] items-center py-4  md:py-0 justify-between px-6 mt-3 text-xl " >
         <CiSearch className=" hidden md:block font-Clash " />
         <h2>Avion</h2>
 
@@ -46,9 +46,12 @@ const toggleButton =()=>{
        </div>
 
       </header>
+     
       <div className=" h-[1px] hidden md:block w-[95%] mx-auto my-3 bg-slate-400  " ></div>
-      <nav className="  " >
-        <ul className={`flex flex-col absolute transition-all duration-300 right-[-10000px] top-[20px]  z-10 w-[50%] md:w-[90%] justify-center     text-center h-[100vh]  md:py-0 bg-white md:static md:items-start md:flex-row text-[#726E8D] text-sm gap-5 py-7  mx-auto ${isOpen? " right-[0px] " : "" }  `} >
+
+      <nav className="flex relative   " >
+        <ul className={`flex flex-col md:h-[63px] md:flex-row md:justify-center   absolute right-0  z-10 w-[50%] md:w-[90%] justify-center  h-screen   text-center  md:py-0 bg-white md:static md:items-start  text-[#726E8D] text-sm gap-5 py-7  md:mx-auto ${isOpen? " top-[5px] right-0 " : "top-[-100vh] " }  `} >
+        {/* <ul className={`flex flex-col  absolute right-0 top-[80px] z-10 w-[50% h-full bg-white   `} > */}
           <li><Link href="/" > Home </Link> </li>
           <li><Link href="/ProductListing"> Product Listing </Link> </li>
           <li><Link href="/About" >About Us  </Link></li>
@@ -60,7 +63,8 @@ const toggleButton =()=>{
         </ul>
 
       </nav>
-     </div> 
+      </div> 
+    
     </>
   )
 }
