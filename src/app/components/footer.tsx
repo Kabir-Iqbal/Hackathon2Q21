@@ -7,7 +7,7 @@ function Footer() {
       <div className="bg-[#2A254B] py-3  md:h-[380px]  " >
         <div className="flex  flex-col w-[90%] py-8 h-full justify-between  mx-auto   " >
         <div className="flex justify-between h-full md:flex-row flex-col   " >
-          <div className="flex flex-wrap text-white items-start gap-8 w-[60%] md:gap-16 font-Clash " >
+          <div className="flex flex-wrap text-white items-start gap-6 w-[60%] md:gap-10 font-Clash " >
             <div className="text-[16px w-[108px] h-[175px]  " >
               Menu
               <ul className=" mt-2 text-[14px] cursor-pointer  flex flex-col font-santoshi  " >

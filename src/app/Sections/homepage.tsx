@@ -1,3 +1,4 @@
+"use client"
 import Header from "../components/header"
 import Image from "next/image"
 import Link from "next/link";
@@ -10,13 +11,8 @@ import Footer from "../components/footer";
 // imported Data 
 import { Product } from "../Data/product";
 
-// styles
-import Style from "./homepage.module.css";
 
 function Hero() {
-
-
-
 
     return (
 
@@ -112,7 +108,7 @@ function Hero() {
 
                                             <div className='text-sm gap-1 h-[20%] sm:h-[30%] text-[#2A254B] flex flex-col my-2 px-1 ' >
                                                 {product.name}
-                                                <p  > {product.price} </p>
+                                                <p  > {`\u00A3 ${ product.price} `} </p>
                                             </div>
 
                                         </div>
@@ -165,7 +161,7 @@ function Hero() {
 
                                                 <div className='text-sm gap-1 h-[20%] sm:h-[25%] text-[#2A254B] flex flex-col my-2 px-1 ' >
                                                     {product2.name}
-                                                    <p  > {product2.price} </p>
+                                                    <p  >{`\u00A3 ${ product2.price} `}  </p>
                                                 </div>
                                             </div>
 

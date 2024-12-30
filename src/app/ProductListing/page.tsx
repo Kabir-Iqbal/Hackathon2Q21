@@ -24,15 +24,15 @@ const Page = () => {
     Dateadded: false,
   })
 
-  const toggleButton = (key : keyof typeof showOptions ) => {
-    SetShowOptions((prev) => ({ ...prev, [key]: !prev[key]  }))
+  const toggleButton = (key: keyof typeof showOptions) => {
+    SetShowOptions((prev) => ({ ...prev, [key]: !prev[key] }))
   }
 
   // responsive
   const [showlinks, SetShowlinks] = useState(false)
 
-  const toogle = ()=>{
-     SetShowlinks(!showlinks)
+  const toogle = () => {
+    SetShowlinks(!showlinks)
 
   }
 
@@ -45,20 +45,20 @@ const Page = () => {
         <Image className="w-full h-full " src="/images/Frame.png" width={1400} height={280} alt="Frame pic" />
       </div>
 
-       {/* responsive */}
-       <div className="flex gap-3 cursor-pointer items-center md:hidden px-8 py-2 z-20 " >
-            <p className="font-bold" > Filter : </p>
-            <div className="flex gap-5 text-2xl  ">
-            {showlinks?   
-              <MdClose onClick={toogle} />
-             :
-             <HiBars4 onClick={toogle} />
-            }
-             </div>
-         </div>
+      {/* responsive */}
+      <div className="flex gap-3 cursor-pointer items-center md:hidden px-8 py-2 z-20 " >
+        <p className="font-bold" > Filter : </p>
+        <div className="flex gap-5 text-2xl  ">
+          {showlinks ?
+            <MdClose onClick={toogle} />
+            :
+            <HiBars4 onClick={toogle} />
+          }
+        </div>
+      </div>
 
       {/* 2nd Component */}
-      <div className={`flex flex-col md:flex-row gap-5 md:gap-0 mt-3 absolute left-[-10000px] transition-all duration-300 bg-white px-16 py-16 z-10 md:z-0 md:static md:justify-between md:px-9 md:py-2 font-santoshi ${showlinks? "left-[0px]  " : ""   }  `} >
+      <div className={`flex flex-col md:flex-row gap-5 md:gap-0 mt-3 absolute left-[-10000px] transition-all duration-300 bg-white px-16 py-16 z-10 md:z-0 md:static md:justify-between md:px-9 md:py-2 font-santoshi ${showlinks ? "left-[0px]  " : ""}  `} >
         {/* left */}
         <div className="flex flex-col md:flex-row gap-5" >
           <div className="cursor-pointer" >
@@ -195,40 +195,40 @@ const Page = () => {
         </div>
 
       </div>
-     
+
 
       {/* Products Listing */}
 
-  
-        {/* first line products */}
-     
-        <div className=" w-[90%] mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 my-8 font-Clash " >
 
-        {Product.slice(0,12).map((product :any )=>{
-          return(
-        
-          <Link key={product.id} href={`${product.id}`  }>
+      {/* first line products */}
 
-        <div className='flex flex-col h-96 w-full   bg-gray-100 shadow-sm shadow-black  0 ' >
-    
+      <div className=" w-[90%] mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 my-8 font-Clash " >
 
-      
-          <div className='w-full mx-auto ' >
-            <Image className=' w-full object-cover my-1 h-72 ' src={product.image} alt={product.name} width={300} height={150} />
-          </div>
+        {Product.slice(0, 12).map((product: any) => {
+          return (
 
-          <div className='text-sm gap-1 text-[#2A254B] flex flex-col my-2 px-1 ' >
-            {product.name}
-            <p  > {product.price} </p>
-          </div>
-          
-        </div>
-        </Link>
+            <Link key={product.id} href={`${product.id}`}>
+
+              <div className='flex flex-col h-96 w-full   bg-gray-100 shadow-sm shadow-black  0 ' >
+
+
+
+                <div className='w-full mx-auto ' >
+                  <Image className=' w-full object-cover my-1 h-72 ' src={product.image} alt={product.name} width={300} height={150} />
+                </div>
+
+                <div className='text-sm gap-1 text-[#2A254B] flex flex-col my-2 px-1 ' >
+                  {product.name}
+                  <p  > {`\u00A3 ${product.price} `}  </p>
+                </div>
+
+              </div>
+            </Link>
           )
-          } )}
-        </div>
-       
-    
+        })}
+      </div>
+
+
 
 
       {/* Button */}
@@ -236,8 +236,8 @@ const Page = () => {
         <button className="px-3 py-2 border-[1px] border-slate-300 justify-center " > View collection </button>
       </div></Link>
 
-    {/* footer */}
-    <Footer />
+      {/* footer */}
+      <Footer />
 
     </div>
 
