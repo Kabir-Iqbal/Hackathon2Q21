@@ -17,7 +17,7 @@ import Link from "next/link";
 function Header() {
 
   const [isOpen, SetisOpen] = useState(false)
-  
+
   const toggleButton = () => {
     SetisOpen(!isOpen)
   }
@@ -27,7 +27,7 @@ function Header() {
   return (
     <>
       {/* Homepage */}
-      <div className="fixed top-0 w-full bg-white z-50 " >
+      <div className=" max-w-[1440px] mx-auto fixed top-0 w-full bg-white z-50 " >
         {/* Banner */}
         <header className="flex h-[51px]  text-[#22202E] items-center py-4  md:py-0 justify-between px-6 mt-3 text-xl " >
           <CiSearch className="order-2 text-2xl  md:order-1 absolute z-50 block right-32  md:static  font-Clash " />
@@ -45,7 +45,7 @@ function Header() {
 
           {/* buttons */}
           <div className="flex order-4 gap-5 text-2xl md:hidden font-santoshi z-50 " >
-          
+
             {!isOpen ?
               <button>  <HiBars4 onClick={toggleButton} /></button>
               :

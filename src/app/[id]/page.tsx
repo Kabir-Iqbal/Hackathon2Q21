@@ -20,7 +20,18 @@ import { add } from "../lib/store/feature/cart/cartSlice";
 import { Product } from "../Data/product"
 
 
+interface ProductType {
+    id: number;
+    name: string;
+    price: number; // Remove | undefined if price is always defined
+    image: string;
+};
+
+
+
 const Page = (props: any) => {
+
+    const Products: ProductType[] = Product
 
     const id = props.params.id
     const product = Product.find((i) => i.id === parseInt(id as string))
@@ -38,27 +49,26 @@ const Page = (props: any) => {
         }
     }
 
-   const amount = product?.price * number
-   
+    const dispatch = useAppDispatch()
+
+
+
+
+
+
+
+    const AddToCart = (productId: number) => {
+        console.log(productId);
+
+        dispatch(add({ id: productId, quantity: number }))
+
+    }
+
     if (!product) {
         return (
             <h1>Page not Found</h1>
         )
     }
- 
-    
-    const dispatch = useAppDispatch()
-
-    // // dispatch amount and quantity
-    //   dispatch(add(amount , number ))
-
-    
-   const AddToCart =(productId :number )=>{
-        console.log(productId);
-
-        dispatch(add({id: productId , quantity: number} ))
-    
-   }
 
     return (
         <>
@@ -106,16 +116,16 @@ const Page = (props: any) => {
                                 <div className=" flex justify-between  " >
                                     {/* right */}
                                     <div className="flex flex-col px-2 sm:px-5 sm:flex-row gap-5 mt-10 items-center">
-                                        <h2 className="text-18px  " > Amount: <span className="ml-2 " > {`\u00A3 ${amount}`} </span>  </h2>
+                                        <h2 className=" text-[14px] sm:text-18px  " > Amount: <span className="ml-2 " > {`\u00A3 ${product.price * number}`} </span>  </h2>
                                         <div className="flex gap-5 px-3 py-2 bg-gray-200 " >
-                                            <button onClick={decrement} > -  </button>
+                                            <button className="text-lg" onClick={decrement} > -  </button>
                                             <h2>{number} </h2>
-                                            <button onClick={increment} className="text-red-700" > + </button>
+                                            <button onClick={increment} className="text-red-700 text-lg" > + </button>
                                         </div>
                                     </div>
                                     {/* left */}
                                     <div className=" cursor-pointer w-[150px] mt-20   sm:justify-center sm:mt-12  text-white font-semibold  flex items-center " >
-                                        <button  onClick={() => AddToCart(product.id)} type="button" className=" px-3 sm:px-5 py-2 bg-[#2a254b] items-center " >Add To Cart</button>
+                                        <button onClick={() => AddToCart(product.id)} type="button" className=" px-3 sm:px-5 py-2 bg-[#2a254b] items-center " >Add To Cart</button>
                                     </div>
 
                                 </div>
@@ -129,14 +139,12 @@ const Page = (props: any) => {
                         <h1 className="font-Clash lg:text-[32px] mt-28 " >You might also love these</h1>
                         <div className="  grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 my-5 font-Clash " >
 
-                            {Product.slice(0, 4).map((product: any) => {
+                            {Products.slice(0, 4).map((product: any) => {
                                 return (
 
                                     <Link key={product.id} href={`${product.id}`}>
 
                                         <div className='flex flex-col h-96 w-full   bg-gray-100 shadow-sm shadow-black  0 ' >
-
-
 
                                             <div className='w-full mx-auto ' >
                                                 <Image className=' w-full object-cover my-1 h-72 ' src={product.image} alt={product.name} width={300} height={150} />
